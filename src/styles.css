@@ -540,6 +540,7 @@ body:has(.technology) {
 
   .crew {
     padding: 13.25rem 9.9375rem 0 9.9375rem;
+    height: 100vh;
   }
 
   .crew-heading {
@@ -548,6 +549,10 @@ body:has(.technology) {
 
   .crew-content {
     width: revert;
+    height: calc(100vh - 19.125rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .crew-bio {
@@ -562,7 +567,6 @@ body:has(.technology) {
 
   .crew-image {
     position: revert;
-    margin-top: 2.5rem;
   }
 
   .crew-image > img {
