@@ -129,6 +129,14 @@ header nav ul li a:visited {
   color: var(--clr-primary-100);
 }
 
+header .mobile-menu {
+  display: none;
+}
+
+header .mobile-nav {
+  display: none;
+}
+
 /* home styling */
 body:has(.home) {
   background-image: url(./assets/home/background-home-desktop.jpg);
@@ -369,6 +377,10 @@ body:has(.crew) {
   right: 10.3125rem;
 }
 
+.crew-image > hr {
+  display: none;
+}
+
 /* technology styling */
 body:has(.technology) {
   background-image: url(./assets/technology/background-technology-desktop.jpg);
@@ -465,6 +477,14 @@ body:has(.technology) {
 }
 
 @media(max-width: 1200px) {
+  .home {
+    padding: 24.1875rem 6rem 0 10.4375rem;
+  }
+
+  .destination {
+    padding: 13.25rem 3rem 0 10.4375rem;
+  }
+
   .crew-image {
     right: 2rem;
   }
@@ -540,7 +560,6 @@ body:has(.technology) {
 
   .crew {
     padding: 13.25rem 9.9375rem 0 9.9375rem;
-    height: 100vh;
   }
 
   .crew-heading {
@@ -608,14 +627,206 @@ body:has(.technology) {
 
 @media(max-width: 767px) {
   :root {
+    --fs-100: 0.75rem;
+    --fs-200: 0.875rem;
+    --fs-300: 0.9375rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 3.5rem;
+    --fs-900: 5rem;
+  }
 
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    top: 1.5rem;
   }
 
   header .decorative-line {
     display: none;
   }
 
-  header nav {
+  header nav.desktop-nav {
     display: none;
+  }
+
+  header .mobile-menu {
+    display: revert;
+  }
+
+  header .mobile-menu:hover {
+    cursor: pointer;
+  }
+
+  header .mobile-nav {
+    display: revert;
+  }
+
+  .mobile-nav {
+    width: 15.875rem;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+    position: absolute;
+    right: -15.875rem;
+    top: -1.5rem;
+    height: 100vh;
+    z-index: 2;
+    transition: right 0.25s;
+  }
+
+  .mobile-nav.active {
+    right: 0;
+  }
+
+  .mobile-nav .close-button {
+    position: absolute;
+    top: 2.125rem;
+    right: 1.6531rem;
+  }
+
+  .mobile-nav .close-button:hover {
+    cursor: pointer;
+  }
+
+  .mobile-nav ul {
+    flex-direction: column;
+    background-color: revert;
+    backdrop-filter: revert;
+    padding: 7.375rem 0 0 2rem;
+  }
+
+  .mobile-nav ul li a.router-link-active {
+    border-right: 0.1875rem solid rgba(255, 255, 255);
+  }
+
+  .mobile-nav ul li a.router-link-active::after {
+    display: none;
+  }
+
+  .mobile-nav ul li a:hover {
+    border-right: 0.1875rem solid rgba(255, 255, 255, 0.5);
+  }
+
+  .mobile-nav ul li a:hover::after {
+    display: none;
+  }
+
+  .home {
+    padding: 7rem 1.5rem 0 1.5rem;
+    row-gap: 5.0625rem;
+  }
+
+  .home-text-content {
+    width: revert;
+  }
+
+  .home-button {
+    height: 9.375rem;
+    width: 9.375rem;
+  }
+
+  .destination {
+    padding: 5.5rem 1.5rem 3.625rem 1.5rem;
+  }
+
+  .destination-heading {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .destination-content {
+    row-gap: 1.625rem;
+  }
+
+  .destination-content > img {
+    width: 10.625rem;
+    height: 10.625rem;
+  }
+
+  .planet-navigation {
+    margin-bottom: 1.9375rem;
+  }
+
+  .planet-name {
+    margin-bottom: 0.0625rem;
+  }
+
+  .planet-description {
+    margin-bottom: 2rem;
+  }
+
+  .planet-info {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .planet-info-text {
+    margin-top: 0;
+  }
+
+  .crew {
+    padding: 5.5rem 1.5rem 3.625rem 1.5rem;
+  }
+
+  .crew-heading {
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+
+  .crew-content {
+    justify-content: start;
+    gap: 2rem;
+  }
+
+  .crew-text-content {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .crew-role, .crew-name, .crew-bio {
+    order: 2;
+  }
+
+  .crew-navigation {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+
+  .crew-image {
+    order: 1;
+  }
+
+  .crew-image > img {
+    height: 13.875rem;
+  }
+
+  .crew-image > hr {
+    display: revert;
+    opacity: 0.5;
+  }
+
+  .technology {
+    padding: 5.5rem 0 3.625rem 0;
+  }
+
+  .technology-heading {
+    padding: 0 1.5rem 0 1.5rem;
+    justify-content: center;
+  }
+
+  .technology-text-content {
+    padding: 0 1.5rem 0 1.5rem;
+    flex-direction: column;
+  }
+
+  .technology-nav {
+    flex-direction: row;
   }
 }

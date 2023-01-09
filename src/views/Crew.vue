@@ -15,6 +15,7 @@
       </div>
       <div class="crew-image">
         <img :src="require(`@/${selectedCrew.images.png}`)" alt="">
+        <hr>
       </div>
     </div>
   </div>
