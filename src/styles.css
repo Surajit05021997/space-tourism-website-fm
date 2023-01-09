@@ -133,7 +133,7 @@ header .mobile-menu {
   display: none;
 }
 
-header .mobile-nav {
+.mobile-nav {
   display: none;
 }
 
@@ -638,7 +638,7 @@ body:has(.technology) {
   }
 
   body {
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 
   header {
@@ -663,24 +663,21 @@ body:has(.technology) {
     cursor: pointer;
   }
 
-  header .mobile-nav {
-    display: revert;
-  }
-
   .mobile-nav {
     width: 15.875rem;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40.7742px);
     position: absolute;
-    right: -15.875rem;
+    right: 0;
     top: -1.5rem;
     height: 100vh;
     z-index: 2;
+    display: none;
     transition: right 0.25s;
   }
 
   .mobile-nav.active {
-    right: 0;
+    display: revert;
   }
 
   .mobile-nav .close-button {

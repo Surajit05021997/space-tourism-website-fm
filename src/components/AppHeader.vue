@@ -25,16 +25,16 @@
       <img class="close-button" src="@/assets/close-button.svg" alt="" @click="closeMobileNav()">
       <ul>
         <li>
-          <router-link to="/home">HOME</router-link>
+          <router-link to="/home" @click="closeMobileNav()">HOME</router-link>
         </li>
         <li>
-          <router-link to="/destination">DESTINATION</router-link>
+          <router-link to="/destination" @click="closeMobileNav()">DESTINATION</router-link>
         </li>
         <li>
-          <router-link to="/crew">CREW</router-link>
+          <router-link to="/crew" @click="closeMobileNav()">CREW</router-link>
         </li>
         <li>
-          <router-link to="/technology">TECHNOLOGY</router-link>
+          <router-link to="/technology" @click="closeMobileNav()">TECHNOLOGY</router-link>
         </li>
       </ul>
     </nav>
