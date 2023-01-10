@@ -1,6 +1,8 @@
 <template>
   <app-header />
-  <router-view />
+  <main role="main">
+    <router-view />
+  </main>
 </template>
 
 <script>
